@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html>
+
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+      #myDIV {
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        background-color: lightblue;
+        margin-top: 20px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <button onclick="myFunction(2)">П. Энхмөнх</button>
+    <button onclick="myFunction(3)">Д. Дагдавдорж</button>
+    <button onclick="myFunction(1)">Б. Нямжав</button>
+
+    <div id="myDIV1">
+      <iframe src="https://online.fliphtml5.com/ghput/hjci" allow="fullscreen" width="100%" height="600" frameborder="0"></iframe>
+    </div>
+    <div id="myDIV2">
+      <iframe src="https://online.fliphtml5.com/ghput/tccr" allow="fullscreen" width="100%" height="600" frameborder="0"></iframe>
+    </div>
+    <div id="myDIV3">
+      <iframe src="https://online.fliphtml5.com/ghput/ftqz" allow="fullscreen" width="100%" height="600" frameborder="0"></iframe>
+    </div>
+
+    <script>
+      var Books = [
+        Book1 = document.getElementById("myDIV1"),
+        Book2 = document.getElementById("myDIV2"),
+        Book3 = document.getElementById("myDIV3"),
+    ]
+      function myFunction(index) {
+        for (let i = 0; i < Books.length; i++) {
+          if(i==index-1){
+            Books[i].style.display = "block";
+          } else {
+            Books[i].style.display = "none";
+          }
+        }
+      }
+
+      myFunction(1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <html>
+
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+      #myDIV {
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        background-color: lightblue;
+        margin-top: 20px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <button onclick="myFunction(1)">Book 1</button>
+    <button onclick="myFunction(2)">Book 2</button>
+
+    <div id="myDIV2">
+      <iframe src="https://online.fliphtml5.com/ghput/nqwa" allow="fullscreen" width="100%" height="600" frameborder="0"></iframe>
+    </div>
+    <div id="myDIV1">
+      <iframe src="https://online.fliphtml5.com/ghput/nqwa" allow="fullscreen" width="100%" height="600" frameborder="0"></iframe>
+    </div>
+
+    <script>
+      var Books = [
+        Book1 = document.getElementById("myDIV1"),
+        Book2 = document.getElementById("myDIV2"),
+    ]
+      function myFunction(index) {
+        for (let i = 0; i < Books.length; i++) {
+          if(i==index-1){
+            Books[i].style.display = "block";
+          } else {
+            Books[i].style.display = "none";
+          }
+        }
+      }
+
+      myFunction(1);
+    </script>
+  </body>
+</html>
